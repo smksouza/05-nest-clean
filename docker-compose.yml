@@ -11,5 +11,5 @@ services:
       POSTGRES_PASSWORD: docker
       POSTGRES_DB: nest-clean
       PGDATA: /data/postgres
-     volumes:
+    volumes:
       - ./data/pg:/data/postgres
