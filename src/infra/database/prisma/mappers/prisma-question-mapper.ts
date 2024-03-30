@@ -29,7 +29,7 @@ export class PrismaQuestionMapper {
       content: question.content,
       slug: question.slug.value,
       createdAt: question.createdAt,
-      updatedAt: question.updateAt,
+      updatedAt: question.updatedAt,
     }
   }
 }
