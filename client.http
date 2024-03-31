@@ -7,7 +7,7 @@ Content-Type: application/json
 
 {
     "name": "Samuel Pereira",
-    "email": "samuel@rocketseat.com.br",
+    "email": "samuel1@rocketseat.com.br",
     "password": "123456"
 }
 
@@ -18,7 +18,7 @@ POST {{baseUrl}}/sessions
 Content-Type: application/json
 
 {
-    "email": "samuel@rocketseat.com.br",
+    "email": "samuel1@rocketseat.com.br",
     "password": "123456"
 }
 
