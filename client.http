@@ -6,8 +6,8 @@ POST {{baseUrl}}/accounts
 Content-Type: application/json
 
 {
-    "name": "Samuel Pereira",
-    "email": "samuel1@rocketseat.com.br",
+    "name": "Dinaldo Ribeiro",
+    "email": "Dinaldo@rocketseat.com.br",
     "password": "123456"
 }
 
@@ -18,7 +18,7 @@ POST {{baseUrl}}/sessions
 Content-Type: application/json
 
 {
-    "email": "samuel1@rocketseat.com.br",
+    "email": "Dinaldo@rocketseat.com.br",
     "password": "123456"
 }
 
