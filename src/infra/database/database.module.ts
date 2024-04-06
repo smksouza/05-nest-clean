@@ -54,7 +54,7 @@ import { PrismaAnswerCommentsRepository } from './prisma/repositories/prisma-ans
     QuestionCommentsRepository,
     QuestionAttachmentsRepository,
     AnswersRepository,
-    AnswerAttachmentsRepository,
+    AnswerCommentsRepository,
     AnswerAttachmentsRepository,
   ],
 })
