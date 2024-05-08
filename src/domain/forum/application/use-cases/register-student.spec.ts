@@ -1,15 +1,15 @@
 import { RegisterStudentUseCase } from './register-student'
-import { InMemoryStudentRepository } from 'test/repositories/in-memory-students-repository'
+import { InMemoryStudentsRepository } from 'test/repositories/in-memory-students-repository'
 import { FakeHasher } from 'test/cryptography/fake-hasher'
 
-let inMemoryStudentsRepository: InMemoryStudentRepository
+let inMemoryStudentsRepository: InMemoryStudentsRepository
 let fakeHasher: FakeHasher
 
 let sut: RegisterStudentUseCase
 
 describe('Register Student', () => {
   beforeEach(() => {
-    inMemoryStudentsRepository = new InMemoryStudentRepository()
+    inMemoryStudentsRepository = new InMemoryStudentsRepository()
 
     fakeHasher = new FakeHasher()
 

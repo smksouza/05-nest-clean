@@ -1,20 +1,20 @@
-import { InMemoryAttachmentRepository } from 'test/repositories/in-memory-attachments-repository'
+import { InMemoryAttachmentsRepository } from 'test/repositories/in-memory-attachments-repository'
 import { UploadAndCreateAttachmentUseCase } from './upload-and-create-attachment'
 import { FakeUploader } from 'test/storage/fake-uploader'
 import { InvalidAttachmentType } from './errors/invalid-attachment-type'
 
-let inMemoryAttachmentRepository: InMemoryAttachmentRepository
+let inMemoryAttachmentsRepository: InMemoryAttachmentsRepository
 let fakeUploader: FakeUploader
 
 let sut: UploadAndCreateAttachmentUseCase
 
 describe('Upload and create attachment', () => {
   beforeEach(() => {
-    inMemoryAttachmentRepository = new InMemoryAttachmentRepository()
+    inMemoryAttachmentsRepository = new InMemoryAttachmentsRepository()
     fakeUploader = new FakeUploader()
 
     sut = new UploadAndCreateAttachmentUseCase(
-      inMemoryAttachmentRepository,
+      inMemoryAttachmentsRepository,
       fakeUploader,
     )
   })
@@ -28,7 +28,7 @@ describe('Upload and create attachment', () => {
 
     expect(result.isRight()).toBe(true)
     expect(result.value).toEqual({
-      attachment: inMemoryAttachmentRepository.items[0],
+      attachment: inMemoryAttachmentsRepository.items[0],
     })
     expect(fakeUploader.uploads).toHaveLength(1)
     expect(fakeUploader.uploads[0]).toEqual(

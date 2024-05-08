@@ -1,10 +1,10 @@
-import { InMemoryStudentRepository } from 'test/repositories/in-memory-students-repository'
+import { InMemoryStudentsRepository } from 'test/repositories/in-memory-students-repository'
 import { FakeHasher } from 'test/cryptography/fake-hasher'
 import { FakeEncrypter } from 'test/cryptography/fake-encrypter'
 import { AuthenticateStudentUseCase } from './authenticate-student'
 import { makeStudent } from 'test/factories/make-student'
 
-let inMemoryStudentsRepository: InMemoryStudentRepository
+let inMemoryStudentsRepository: InMemoryStudentsRepository
 let fakeHasher: FakeHasher
 let fakeEncrypter: FakeEncrypter
 
@@ -12,7 +12,7 @@ let sut: AuthenticateStudentUseCase
 
 describe('Authenticate Student', () => {
   beforeEach(() => {
-    inMemoryStudentsRepository = new InMemoryStudentRepository()
+    inMemoryStudentsRepository = new InMemoryStudentsRepository()
 
     fakeHasher = new FakeHasher()
     fakeEncrypter = new FakeEncrypter()

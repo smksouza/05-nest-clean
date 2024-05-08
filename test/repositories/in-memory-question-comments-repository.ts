@@ -1,7 +1,7 @@
 import { PaginationParams } from '@/core/repositories/pagination-params'
 import { QuestionCommentsRepository } from '@/domain/forum/application/repositories/question-comments-repository'
 import { QuestionComment } from '@/domain/forum/enterprise/entities/question-comment'
-import { InMemoryStudentRepository } from './in-memory-students-repository'
+import { InMemoryStudentsRepository } from './in-memory-students-repository'
 import { CommentWithAuthor } from '@/domain/forum/enterprise/entities/value-objects/comment-with-author'
 
 export class InMemoryQuestionCommentsRepository
@@ -9,7 +9,7 @@ export class InMemoryQuestionCommentsRepository
 {
   public items: QuestionComment[] = []
 
-  constructor(private studentsRepository: InMemoryStudentRepository) {}
+  constructor(private studentsRepository: InMemoryStudentsRepository) {}
 
   async findById(id: string) {
     const questionComment = this.items.find((item) => item.id.toString() === id)
